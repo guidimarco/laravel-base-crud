@@ -49,7 +49,10 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        return('ciao ' . $id);
+        $data = [
+            'product' => Product::find($id)
+        ];
+        return view('products.show', $data);
     }
 
     /**
