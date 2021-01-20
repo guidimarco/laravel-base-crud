@@ -34,7 +34,9 @@
                                 <td>{{ $product -> brand }}</td>
                                 <td>{{ $product -> note }}</td>
                                 <td>{{ $product -> price }}</td>
-                                <td>vedi prodotto</td>
+                                <td>
+                                    <a href="{{ route('products.show', ['product' => $product -> id]) }}" class="btn btn-dark">See more</a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
