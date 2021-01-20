@@ -49,10 +49,18 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $data = [
-            'product' => Product::find($id)
-        ];
-        return view('products.show', $data);
+        $thisProduct = Product::find($id); // get product info
+        // check
+        if ($thisProduct) {
+            // it's not null
+            $data = [
+                'product' => $thisProduct
+            ];
+            return view('products.show', $data);
+        }
+
+        // it's null -> 404
+        abort(404);
     }
 
     /**
