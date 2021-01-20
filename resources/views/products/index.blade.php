@@ -21,18 +21,22 @@
                             <th scope="col">Brand</th>
                             <th scope="col">Note</th>
                             <th scope="col">Price</th>
+                            <th scope="col">See product</th>
                         </tr>
                     </thead>
 
                     {{-- corpo --}}
                     <tbody>
-                        <tr>
-                            <td>Mark</td>
-                            <td>Mark</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
+                        @foreach ($products as $product)
+                            <tr>
+                                <td>{{ $product -> id }}</td>
+                                <td>{{ $product -> name }}</td>
+                                <td>{{ $product -> brand }}</td>
+                                <td>{{ $product -> note }}</td>
+                                <td>{{ $product -> price }}</td>
+                                <td>vedi prodotto</td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
