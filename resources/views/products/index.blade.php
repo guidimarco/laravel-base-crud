@@ -5,10 +5,9 @@
 @section('main-content')
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 py-4">
                 <h1>All products</h1>
-                <p>Crea un nuovo prodotto:</p>
-                <a href="{{ route('products.create') }}" class="btn btn-dark">Crea</a>
+                <a href="{{ route('products.create') }}" class="btn btn-outline-dark btn-block">Crea un nuovo articolo</a>
             </div>
         </div>
 
