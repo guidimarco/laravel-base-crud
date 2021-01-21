@@ -17,6 +17,7 @@
                     <li>Id: {{ $product -> id }}</li>
                     <li>Name: {{ $product -> name }}</li>
                     <li>Brand: {{ $product -> brand }}</li>
+                    <li>Disponibile: {{ ($product -> available == 1) ? 'si' : 'no' }}</li>
                     <li>Price: {{ number_format($product -> price, 2, ',', ' ') }}</li>
                     <li>Note: {{ $product -> note }}</li>
                 </ul>
