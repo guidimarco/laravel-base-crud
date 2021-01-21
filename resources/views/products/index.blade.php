@@ -7,6 +7,8 @@
         <div class="row">
             <div class="col-12">
                 <h1>All products</h1>
+                <p>Crea un nuovo prodotto:</p>
+                <a href="{{ route('products.create') }}" class="btn btn-dark">Crea</a>
             </div>
         </div>
 
