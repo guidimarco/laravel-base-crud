@@ -12,7 +12,10 @@
 
         <div class="row">
             <div class="col-12">
-                <form>
+                <form method="POST" action="{{ route('products.store') }}">
+                    {{-- token --}}
+                    @csrf
+
                     {{-- product name --}}
                     <div class="form-group">
                         <label>Nome</label>
@@ -30,13 +33,17 @@
                         <label>Note</label>
                         <textarea class="form-control" name="note" placeholder="Inserisci le note" row="3"></textarea>
                     </div>
+                    
+                    {{-- product prezzo --}}
+                    <div class="form-group">
+                        <label>Prezzo</label>
+                        <input type="number" class="form-control" name="price" placeholder="Inserisci il prezzo">
+                    </div>
+
+                    {{-- bottone di submit --}}
+                    <button type="submit" class="btn btn-primary">Invia</button>
                 </form>
 
-                {{-- product prezzo --}}
-                <div class="form-group">
-                    <label>Prezzo</label>
-                    <input type="number" class="form-control" name="price" placeholder="Inserisci il prezzo">
-                </div>
             </div>
         </div>
     </div>
