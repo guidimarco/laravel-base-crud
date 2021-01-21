@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Products | All products')
+@section('title', 'Products | Product ' . $product -> name)
 
 @section('main-content')
     <div class="container">
@@ -17,7 +17,7 @@
                     <li>Id: {{ $product -> id }}</li>
                     <li>Name: {{ $product -> name }}</li>
                     <li>Brand: {{ $product -> brand }}</li>
-                    <li>Price: {{ $product -> price }}</li>
+                    <li>Price: {{ number_format($product -> price, 2, ',', ' ') }}</li>
                     <li>Note: {{ $product -> note }}</li>
                 </ul>
             </div>
