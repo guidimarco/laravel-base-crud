@@ -33,11 +33,25 @@
                         <label>Note</label>
                         <textarea class="form-control" name="note" placeholder="Inserisci le note" row="3"></textarea>
                     </div>
-                    
+
                     {{-- product prezzo --}}
                     <div class="form-group">
                         <label>Prezzo</label>
                         <input type="number" class="form-control" name="price" placeholder="Inserisci il prezzo">
+                    </div>
+
+                    {{-- available -> si/no radio --}}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="available" value="item-available" checked>
+                        <label class="form-check-label">
+                            Disponibile
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="available" value="item-not-available">
+                        <label class="form-check-label">
+                            Non disponibile
+                        </label>
                     </div>
 
                     {{-- bottone di submit --}}
