@@ -22,6 +22,7 @@
                             <th scope="col">Brand</th>
                             <th scope="col">Note</th>
                             <th scope="col">Price</th>
+                            <th scope="col">Disponibile</th>
                             <th scope="col">See product</th>
                         </tr>
                     </thead>
@@ -34,7 +35,8 @@
                                 <td>{{ $product -> name }}</td>
                                 <td>{{ $product -> brand }}</td>
                                 <td>{{ $product -> note }}</td>
-                                <td>{{ $product -> price }}</td>
+                                <td>&euro; {{ number_format($product -> price, 2, ',', ' ') }}</td>
+                                <td>{{ $product -> available == 0 ? 'no' : 'sì' }}</td>
                                 <td>
                                     <a href="{{ route('products.show', ['product' => $product -> id]) }}" class="btn btn-dark">See more</a>
                                 </td>
