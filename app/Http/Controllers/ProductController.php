@@ -42,8 +42,15 @@ class ProductController extends Controller
         // dd($product_input);
 
         $new_product = new Product(); // new istance
-
         $new_product->fill($request->all());
+
+        if ($product_input['available'] == 'item-not-available') {
+            $new_product->available = 0;
+        } else {
+            $new_product->available = 1;
+        }
+        // dd($product_input['available']);
+
         $new_product->save();
 
         // redirect to index
