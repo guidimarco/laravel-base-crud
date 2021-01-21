@@ -38,7 +38,16 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        $product_input = $request->all();
+        // dd($product_input);
+
+        $new_product = new Product(); // new istance
+
+        $new_product->fill($request->all());
+        $new_product->save();
+
+        // redirect to index
+        return redirect()->route('products.index');
     }
 
     /**
