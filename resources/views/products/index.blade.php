@@ -44,6 +44,11 @@
                                     <a href="{{ route('products.edit', ['product' => $product -> id]) }}" class="btn btn-secondary">
                                         Modifica
                                     </a>
+                                    <form action="{{ route('products.destroy', ['product' => $product->id]) }}" method="POST" class="d-inline-block">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" name="button" class="btn btn-danger">Cancella</button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
