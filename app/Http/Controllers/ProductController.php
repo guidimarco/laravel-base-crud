@@ -111,7 +111,7 @@ class ProductController extends Controller
 
         $product->update($edit_product);
 
-        return redirect()->route('products.index');
+        return redirect()->route('products.show', $product->id);
     }
 
     /**
