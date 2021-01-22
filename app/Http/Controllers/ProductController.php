@@ -85,9 +85,17 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Product $product)
     {
-        //
+        // dd($product);
+        if ($product) {
+            $data = [
+                'this_product' => $product
+            ];
+            return view('products.edit', $data);
+        } else {
+            abort(404);
+        }
     }
 
     /**
