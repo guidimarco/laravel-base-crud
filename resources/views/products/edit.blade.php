@@ -12,9 +12,10 @@
 
         <div class="row">
             <div class="col-12">
-                <form method="POST" action="{{ route('products.store') }}">
+                <form method="POST" action="{{ route('products.update', ['product' => $this_product->id]) }}">
                     {{-- token --}}
                     @csrf
+                    @method('PUT')
 
                     {{-- product name --}}
                     <div class="form-group">
